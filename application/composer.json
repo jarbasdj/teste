@@ -1,0 +1,21 @@
+{
+    "name": "jarbas/restapi",
+    "description": "REST API project",
+    "type": "project",
+    "require": {
+        "coffeecode/router": "^1.0",
+        "symfony/var-dumper": "^5.0"
+    },
+    "autoload": {
+        "classmap": [
+            "app/Controllers",
+            "app/Models"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Jarbas Santos",
+            "email": "jarbas@blasterweb.com.br"
+        }
+    ]
+}

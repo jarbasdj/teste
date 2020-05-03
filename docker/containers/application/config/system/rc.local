@@ -1,0 +1,6 @@
+#!/bin/bash
+
+service php7.3-fpm start
+# service varnish start
+service nginx start
+# service cron start

@@ -1,0 +1,224 @@
+{
+	"info": {
+		"_postman_id": "309f25f7-ca83-42b6-96ee-87efb1343079",
+		"name": "Teste",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "AccessToken",
+						"value": "b19180fdbdee794353c3ecc1da11b9f2",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"page\": 1,\n\t\"perPage\": 20\n}"
+				},
+				"url": {
+					"raw": "http://www.localhost/users",
+					"protocol": "http",
+					"host": [
+						"www",
+						"localhost"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "AccessToken",
+						"value": "de3021d1e7d7fb5e6ccc9de0d0e551a8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://www.localhost/users/1027",
+					"protocol": "http",
+					"host": [
+						"www",
+						"localhost"
+					],
+					"path": [
+						"users",
+						"1027"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Jarbas dos Santos\",\n\t\"email\": \"jarbas@vhlabs.com.br\",\n\t\"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://www.localhost/users",
+					"protocol": "http",
+					"host": [
+						"www",
+						"localhost"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "AccessToken",
+						"value": "085b72d7a82533a6978298964713a1ba",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Jarbas Santos\",\n\t\"email\": \"jarbas@vhlabs.com.br\",\n\t\"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://www.localhost/users/1029",
+					"protocol": "http",
+					"host": [
+						"www",
+						"localhost"
+					],
+					"path": [
+						"users",
+						"1029"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"jarbas@vhlabs.com.br\",\n\t\"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://www.localhost/login",
+					"protocol": "http",
+					"host": [
+						"www",
+						"localhost"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "AccessToken",
+						"value": "b19180fdbdee794353c3ecc1da11b9f2",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://www.localhost/users/1027",
+					"protocol": "http",
+					"host": [
+						"www",
+						"localhost"
+					],
+					"path": [
+						"users",
+						"1027"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Drink",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "AccessToken",
+						"value": "085b72d7a82533a6978298964713a1ba",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"drink_ml\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://www.localhost/users/1029/drink",
+					"protocol": "http",
+					"host": [
+						"www",
+						"localhost"
+					],
+					"path": [
+						"users",
+						"1029",
+						"drink"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
