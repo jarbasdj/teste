@@ -24,7 +24,7 @@ class User extends Controller
         $this->validateAccess();
 
         $page = $this->input['page'] ?? 1;
-        $perPage = $input['perPage'] ?? 20;
+        $perPage = $this->input['perPage'] ?? 20;
 
         $allUsers = $this->userModel->getAllUsers($page, $perPage);
 
